@@ -1,0 +1,28 @@
+{
+  "name": "carshop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack serve"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kmjyz44/Online-Store-.git"
+  },
+  "author": "Lzhovtyak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kmjyz44/Online-Store-/issues"
+  },
+  "homepage": "https://github.com/kmjyz44/Online-Store-#readme",
+  "devDependencies": {
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.9.3"
+  },
+  "dev": "webpack --mode development",
+  "build": "webpack --mode production"
+}

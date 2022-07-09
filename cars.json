@@ -1,0 +1,60 @@
+{
+    "1000" :{
+        "art":"car1",
+        "carhref":"roma.html",
+"immage": "././img/Ferrari/Max3000/MAX_2974ED_w.jpg",
+"name": "FERRARI ROMA VINACCIA",
+"price":230000,
+"year":1957,
+    "collor": "black",
+    "producer":"FERRARI",
+    "run":55000,
+    "fuel":"PETROL",
+    "interior":"Iroko",
+    "engine":4.0,
+    "dispersal":3.4,
+    "Transmission":8,
+    "availability":1
+}
+    ,
+    "1001" :{
+        "art":"car2",
+        "carhref":"stradale.html",
+"immage": "./img/Ferrari/SF90Stradale/sf90.jpg",
+"name": "FERRARI SF90 STRADALE",
+"price":650000,
+"year":2021,
+    "collor": "red",
+    "producer":"FERRARI",
+    "run":250,
+    "fuel":"hybrid",
+    "interior":"Iroko",
+    "carbody": "coupe",
+    "engine":4,
+    "dispersal":2.5,
+    "speed":340,
+    "Transmission":8,
+    "availability":2
+
+    }, 
+    "1002" :{
+        "art":"car3",
+        "carhref":"aventador.html",
+"immage": "./img/lamborghini/orange-lambo-e-1.jpg",
+"name": "LAMBORGHINI AVENTADOR LP 700-4",
+"price":320000,
+"year":2012,
+    "collor": "red",
+    "producer":"LAMBORGHINI",
+    "run":15500,
+    "fuel":"PETROL",
+    "interior":"Nero Ade with Arancio",
+    "carbody": "Sports",
+    "engine":6.5,
+    "dispersal":2.8,
+    "speed":355,
+    "Transmission":7,
+    "availability":1
+}
+    
+}
