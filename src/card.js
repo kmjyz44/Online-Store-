@@ -16,7 +16,8 @@ let  carr_array = [];
         //$('#properties_list').html(out);
         for(let cars of carr_array){
             out+='<li class = '+cars.art+'>';
-            out+= '<a href="#" class = "drive">'+"&#128663"+'</a>';
+
+            out+= '<div class = "wrapper_car">'+'<a href="#" class = "drive" title="Buy">'+"&#9989"+'</a>'+ '</div>';
             out+= '<a href='+cars.carhref+'><img src = "'+cars.immage+'" alt=""></img></a>';
             out+= '<div class="name_year">'+'<h1 class = "name">'+cars.name+ '&nbsp'+'</h1>'+ '<h1>'+ cars.year+ ' YEAR'+'</h1>'+'</div>';
             out+= '<h2 class = "carprice">'+"$"+cars.price+'<h2>'

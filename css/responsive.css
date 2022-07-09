@@ -424,6 +424,7 @@ header nav .login_btn:hover{
 .listings ul.properties_list{
     list-style: none;
     overflow: hidden;
+    
 }
 
 .listings ul.properties_list li{
@@ -434,6 +435,9 @@ header nav .login_btn:hover{
     float: left;
     margin: 0 3.636363636363636% 3.636363636363636% 3;
     padding: 2%; 
+    margin-bottom: 5%;
+    background: #dcd5d5; 
+    border-radius: 5%;
 }
 
 .listings ul.properties_list li img.property_img{
@@ -459,10 +463,24 @@ header nav .login_btn:hover{
     -moz-border-radius: 2px;
     -o-border-radius: 2px;
 }
-
+.listings ul.properties_list li .wrapper_car{
+   display: flex;
+    position: absolute;
+    bottom: 1%;
+    right: 5%;
+    padding-bottom: 5%;
+    
+}
+.listings ul.properties_list li .drive{
+    font-size: 20px;
+    letter-spacing: 5px;
+}
+.listings ul.properties_list li .drive:hover{
+    font-size: 45px;
+}
 .listings ul.properties_list li .carprice{
     position: absolute;
-    bottom: 20%;
+    bottom: 23%;
     left: 10px;
     padding: 5px 10px;
     background: #bfbd86;
