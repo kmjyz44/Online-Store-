@@ -1,10 +1,11 @@
 
-let carcard = document.querySelector('.car_card');
+ let carcard = document.querySelector('.car_card');
 
  $('document').ready(function(){
     loadcars();
 });
 let  carr_array = [];
+
     function loadcars (){
     let out='';
      $.getJSON('cars.json', function(data){
@@ -113,3 +114,4 @@ formElement.addEventListener('submit', (e) => {
 });
 
 });
+module.export.carcard;
