@@ -13,8 +13,8 @@
  
   .titl{
     position: absolute;
-    width: 50%;
-    background: #E1E8EE;
+    width: 70%;
+    background: #f3f4f5;
 
   }
   .titl h1{
@@ -29,19 +29,35 @@
    padding: 10px;
     
   }
+  .titleCart{
+display: flex;
+justify-content: center;
 
+  }
+
+.closeCart{
+  font-size: 36px;
+  color: red;
+  position: relative;
+  text-decoration: none;
+  left: 40%;
+}
      .item {
     padding: 20px 30px;
-    display: flex;
-    
+    display: flex; 
     text-align: center;
     border: #1f2123;
     background: white;
     border-top:  1px solid #a6b4c1;
     border-bottom:  1px solid #7d90a0;
+    margin-top: 10px;
   }
-   
- 
+.item .close{
+  position:absolute;
+  text-decoration: none;
+  font-size: 20px;
+  color: red;
+}   
   .buttons {
     position: relative;
     padding-top: 30px;
@@ -66,7 +82,7 @@
 .description span {
   display: block;
   font-family: "lato-bold", Helvetica, Arial, sans-serif;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
   color: #43484D;
   font-weight: 400;
@@ -75,14 +91,14 @@
 .description span:first-child {
   margin-bottom: 5px;
   font-family: "lato-bold", Helvetica, Arial, sans-serif;
-    font-size: 25px;
+    font-size: 22px;
     font-weight: bold;
 }
 .description span:last-child {
   font-weight: 300;
   margin-top: 8px;
   font-family: "lato-bold", Helvetica, Arial, sans-serif;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
 }
 .quantity {
@@ -107,8 +123,8 @@
   }
    
   button[class*=btn] {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border: none;
     cursor: pointer;
     outline: none; /* Для синий ободки */
@@ -120,7 +136,7 @@
     margin-bottom: 1px;
   }
   .plus-btn img {
-    margin-top: 4px;
+    margin-top: 2px;
   }
    
   button:focus,
@@ -131,11 +147,10 @@
     width: 20%;
     padding-top: 27px;
     text-align: center;
-    font-size: 26px;
+    font-size: 22px;
     color: #43484D;
     font-weight: 300;
     font-family: "lato-bold", Helvetica, Arial, sans-serif;
-    font-size: 25px;
     font-weight: bold;
   }
 
@@ -167,21 +182,35 @@ padding: 30px;
     font-size: 16px;
     box-sizing: border-box;
     border-radius: 30px;
-    
 
   }
+  .image {
+    width: 40%;
+  }
+  .image img {
+    width: 40%;
+  }
+
   .endbascet .buyBtn a{
     font-family: "lato-bold", Helvetica, Arial, sans-serif;
     font-size: 25px;
+    color: white;
     font-weight: bold;
     text-decoration: none;
-    color: #1f2123;
+    
   }
   .loans a{
     color: rgb(16, 39, 209);
     font-size: 22px;
     text-decoration: none;
   }
+  .buyCar h1{
+    font-size: 24px;
+    color: #43484D;
+    text-align: center;
+  }
+
+
   @media (max-width: 800px) {
     .shopping-cart {
       width: 100%;
