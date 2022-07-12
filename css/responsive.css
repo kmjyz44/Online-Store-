@@ -463,7 +463,7 @@ header nav .login_btn:hover{
     -moz-border-radius: 2px;
     -o-border-radius: 2px;
 }
-.listings ul.properties_list li .wrapper_car{
+.listings ul.properties_list li .drive{
    display: flex;
     position: absolute;
     bottom: 1%;

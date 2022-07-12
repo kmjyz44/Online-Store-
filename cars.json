@@ -1,5 +1,5 @@
 {
-    "1000" :{
+    "car1" :{
         "art":"car1",
         "carhref":"roma.html",
 "immage": "././img/Ferrari/Max3000/MAX_2974ED_w.jpg",
@@ -17,7 +17,7 @@
     "availability":1
 }
     ,
-    "1001" :{
+    "car2" :{
         "art":"car2",
         "carhref":"stradale.html",
 "immage": "./img/Ferrari/SF90Stradale/sf90.jpg",
@@ -37,7 +37,7 @@
     "availability":2
 
     }, 
-    "1002" :{
+    "car3" :{
         "art":"car3",
         "carhref":"aventador.html",
 "immage": "./img/lamborghini/orange-lambo-e-1.jpg",
