@@ -48,6 +48,9 @@ justify-content: center;
   text-decoration: none;
   font-size: 20px;
   color: red;
+}
+.item_none{
+  display: none;
 }   
   .buttons {
     position: relative;

@@ -111,26 +111,7 @@ formElement.addEventListener('submit', (e) => {
     
 
 });
-//window.onload = function(){
-    
-//const add_basket = (event) => {
-  //  const s = event.target;
-    //if(basket_car[s.getAttribute('data-art')]!=undefined){
-      //  basket_car[s.getAttribute('data-art')]++;
-        
-    //}
-   //else{
-    //basket_car[s.getAttribute('data-art')] = 1;
-    
-    //}
-    //localStorage.setItem(addcars,JSON.stringify(basket_car));
-//}
-  // document.querySelectorAll(".drive").forEach(button => {
-    //    button.addEventListener('click', add_basket)
-    //}) 
 
-//
-//}
 
 function addToCart(){
     let articul = $(this).attr('data-art');
