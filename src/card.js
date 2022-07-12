@@ -1,5 +1,6 @@
 let basket_car = {};
  let carcard = document.querySelector('.car_card');
+ 
  $('document').ready(function(){
     loadcars();
     checkCart();
@@ -15,18 +16,46 @@ let  carr_array = [];
         carr_array.push(new Cars (key, data[key].carhref,data[key]['immage'], data[key].name, data[key].price,data[key].year, data[key]['collor'],data[key].producer,data[key].run,data[key].fuel,data[key].interior,data[key].engine,data[key].dispersal,data[key].transmission));
 
         }
-        for(let cars of carr_array){
-            out+='<li class = '+cars.art+'>';
-            out+= '<button href="#" class = "drive" title="Buy" data-art = "'+cars.art+'">'+"&#9989"+'</button>';
-            out+= '<a href='+cars.carhref+' class = "link_car"><img src = "'+cars.immage+'" alt="" class = "img_car"></img></a>';
-            out+= '<div class="name_year">'+'<h1 class = "name">'+cars.name+ '&nbsp'+'</h1>'+ '<h1>'+ cars.year+ ' YEAR'+'</h1>'+'</div>';
-            out+= '<h2 class = "carprice">'+"$"+cars.price+'<h2>'
-             out+='<p>'+ cars.year+" /"+cars.collor+" /"+cars.run+"km /"+cars.fuel+" /"+cars.engine+"sec" + '</p>';
+        for(let key in data){
+            out+='<li class = '+data[key].art+'>';
+            out+= '<button href="#" class = "drive" title="Buy" data-art = "'+data[key].art+'">'+"&#128465;"+'</button>';
+            out+= '<a href='+data[key].carhref+' class = "link_car"><img src = "'+data[key].immage+'" alt="" class = "img_car"></img></a>';
+            out+= '<div class="name_year">'+'<h1 class = "name">'+data[key].name+ '&nbsp'+'</h1>'+ '<h1>'+ data[key].year+ ' YEAR'+'</h1>'+'</div>';
+            out+= '<h2 class = "carprice">'+"$"+data[key].price+'<h2>'
+             out+='<p>'+ data[key].year+" /"+data[key].collor+" /"+data[key].run+"km /"+data[key].fuel+" /"+data[key].engine+"sec" + '</p>';
               out+='</li>'
         }
         $('#properties_list').html(out);
         $('button.drive').on('click',addToCart);
+        
     })
+    function showCart(){
+        checkCart();
+        let out = 0;
+        for(let cars in cart){
+            out+= cart[cars];
+        }
+        $('a.logo').html(out);
+       
+        }
+        function addToCart(){
+            let articul = $(this).attr('data-art');
+            if(basket_car[articul]!=undefined){
+                basket_car[articul]++;
+            }
+            else{
+                basket_car[articul]=1;  
+            }
+            localStorage.setItem('cart',JSON.stringify(basket_car));
+            showCart();
+        }
+        
+}
+
+function checkCart(){
+    if(localStorage.getItem('cart')!=null){
+        cart = JSON.parse(localStorage.getItem('cart'));
+    }
 }
 
 // фильтр єлементов
@@ -113,29 +142,5 @@ formElement.addEventListener('submit', (e) => {
 });
 
 
-function addToCart(){
-    let articul = $(this).attr('data-art');
-    if(basket_car[articul]!=undefined){
-        basket_car[articul]++;
-    }
-    else{
-        basket_car[articul]=1;
-        
-    }
-    localStorage.setItem('cart',JSON.stringify(basket_car));
-    showCart();
-}
 
-function checkCart(){
-    if(localStorage.getItem('cart')!=null){
-        cart = JSON.parse(localStorage.getItem('cart'));
-    }
-}
 
-function showCart(){
-let out = '';
-for(let cars in cart){
-    out+= cars + '------'+cart[cars]+'<br>'
-}
-$('#minicart').html(out);
-}

@@ -466,17 +466,23 @@ header nav .login_btn:hover{
 .listings ul.properties_list li .drive{
    display: flex;
     position: absolute;
-    bottom: 1%;
+    bottom: 0%;
     right: 5%;
     padding-bottom: 5%;
     
 }
 .listings ul.properties_list li .drive{
-    font-size: 20px;
+    font-size: 40px;
     letter-spacing: 5px;
+    color: #df1a1a;
+    border: none;
+    cursor: pointer;
+    outline: none; /* Для синий ободки */
+    border: 0;
+    background: transparent;
 }
 .listings ul.properties_list li .drive:hover{
-    font-size: 45px;
+    font-size: 65px;
 }
 .listings ul.properties_list li .carprice{
     position: absolute;
@@ -578,9 +584,29 @@ header nav .login_btn:hover{
     color: #a0c3e5;
     border: 2px solid #a0c3e5;    
 }
-
-
-
+.basket_car{
+    display: block;
+    background-image: url(/img/svg/basket.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    background-size: 148px 160px;
+    height: 160px;
+    width: 148px;
+    left: 90%;
+    
+}
+.basket_car .logo {
+    background-color: #64b2c0;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 30px;
+    margin-left: 40px;
+    margin-top: 20px;
+    min-width: 20px;
+    padding: 5px 5px;
+    text-align: center;
+}
 /*  footer  */
 footer{
     padding-top: 100px;
