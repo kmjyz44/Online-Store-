@@ -4,7 +4,6 @@ let basket_car = {};
  $('document').ready(function(){
     loadcars();
     checkCart();
-    showCart()
 });
 let  carr_array = [];
 
@@ -17,7 +16,7 @@ let  carr_array = [];
 
         }
         for(let key in data){
-            out+='<li class = '+data[key].art+'>';
+            out+='<li class = '+data[key].art+' data-price = '+data[key].price+' data-year = '+ data[key].year+'>';
             out+= '<button href="#" class = "drive" title="Buy" data-art = "'+data[key].art+'">'+"&#128465;"+'</button>';
             out+= '<a href='+data[key].carhref+' class = "link_car"><img src = "'+data[key].immage+'" alt="" class = "img_car"></img></a>';
             out+= '<div class="name_year">'+'<h1 class = "name">'+data[key].name+ '&nbsp'+'</h1>'+ '<h1>'+ data[key].year+ ' YEAR'+'</h1>'+'</div>';
@@ -27,10 +26,11 @@ let  carr_array = [];
         }
         $('#properties_list').html(out);
         $('button.drive').on('click',addToCart);
-        
+        $('button.advanced_search_icon_clear').on('click',cleaning)
     })
     function showCart(){
         checkCart();
+        
         let out = 0;
         for(let cars in cart){
             out+= cart[cars];
@@ -40,22 +40,32 @@ let  carr_array = [];
         }
         function addToCart(){
             let articul = $(this).attr('data-art');
+            if(basket_car[articul]==20){
+                alert('Извините, все слоты заполнены');
+            }
+            else{
             if(basket_car[articul]!=undefined){
                 basket_car[articul]++;
             }
             else{
                 basket_car[articul]=1;  
             }
+        }
+            event.target.classList.add('blue');
             localStorage.setItem('cart',JSON.stringify(basket_car));
             showCart();
         }
         
 }
 
+
+
+
 function checkCart(){
     if(localStorage.getItem('cart')!=null){
         cart = JSON.parse(localStorage.getItem('cart'));
     }
+    
 }
 
 // фильтр єлементов
@@ -137,9 +147,23 @@ formElement.addEventListener('submit', (e) => {
                             document.querySelector('.'+cars.art).classList.remove("active_datel")
                             }
 }
-    
 
 });
+function cleaning (){
+    for(let cars of carr_array){
+        document.querySelector('.'+cars.art).classList.remove("active_col");
+        document.querySelector('.'+cars.art).classList.remove("active");
+        document.querySelector('.'+cars.art).classList.remove("active_max");
+        document.querySelector('.'+cars.art).classList.remove("active_date");
+        document.querySelector('.'+cars.art).classList.remove("active_datel")
+    }
+}
+window.onload = function () {
+let sortcar = document.querySelector('#properties_list');
+//sortcar.forEach(elemen => {console.log(elemen);})
+replaceNode=sortcar.replaceChild(sortcar.children[1], sortcar.children[0]);
+sortcar.appendChild(replaceNode);
+}
 
 
 

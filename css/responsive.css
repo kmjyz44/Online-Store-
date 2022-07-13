@@ -161,16 +161,7 @@ header nav .login_btn:hover{
     display: flex;
 }
 
-
-
-
-
-
-
-
-
 /*  Hero Section  */
-
 .hero{
     width: 100%;
     height: 900px;
@@ -200,9 +191,6 @@ header nav .login_btn:hover{
     position: relative;
     display: block;
 }
-
-
-
 
 /*  Search Section  */
 .search{
@@ -258,6 +246,7 @@ header nav .login_btn:hover{
     float: right;
     background: url('../img/advanced_search_active.png') no-repeat;
     margin-top: 37px;
+    padding: 10px;
 
     transition: all .2s linear;
     -webkit-transition: all .2s linear;
@@ -272,8 +261,62 @@ header nav .login_btn:hover{
 .search .advanced_search_icon.active{
     background: url('../img/advanced_search_active.png') no-repeat;
 }
+.advanced_search_icon_clear{
+    display: block;
+    width: 34px;
+    height: 34px;
+    float: right;
+    background: url('../img/clear.png') no-repeat;
+    margin-top: 38px;
+    padding: 0px 10px 0px 10px;
+    border: none;
+    cursor: pointer;
+    outline: none; /* Для синий ободки */
+    border: 0;
+    transition: all .2s linear;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;
+}
+.advanced_search_icon_price{
+    position: absolute;
+    display: inline-block;
+    align-items: center;
+    width: 38px;
+    height: 38px;
+    left: 83%;
+    background: url('../img/price.png') no-repeat;
+    margin-top: 40px;
+    padding: 0px 10px 0px 10px;
+    border: none;
+    cursor: pointer;
+    outline: none; /* Для синий ободки */
+    border: 0;
+    transition: all .2s linear;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;
 
-
+}
+.advanced_search_icon_date{
+    position: absolute;
+    align-items: center;
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    left: 87%;
+    background: url('../img/date.png') no-repeat;
+    margin-top: 31px;
+    padding: 0px 10px 0px 10px;
+    border: none;
+    cursor: pointer;
+    outline: none; /* Для синий ободки */
+    border: 0;
+    transition: all .2s linear;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;
+}
 .search .advanced_search{
     width: 100%;
     position: absolute;
@@ -483,6 +526,7 @@ header nav .login_btn:hover{
 }
 .listings ul.properties_list li .drive:hover{
     font-size: 65px;
+    
 }
 .listings ul.properties_list li .carprice{
     position: absolute;
@@ -501,7 +545,9 @@ header nav .login_btn:hover{
     -moz-border-radius: 2px;
     -o-border-radius: 2px;
 }
-
+.listings ul.properties_list li .blue{
+    color: blue;
+}
 
 .listings ul.properties_list li:nth-child(3n+0){
     margin-right: 0;
@@ -607,6 +653,7 @@ header nav .login_btn:hover{
     padding: 5px 5px;
     text-align: center;
 }
+
 /*  footer  */
 footer{
     padding-top: 100px;

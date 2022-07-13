@@ -38,11 +38,15 @@
 
 	<section class="search">
 		<div class="wrapper">
+			<button class="advanced_search_icon_price" id="advanced_search_btn__price" title="sort price"></button>
+				<button class="advanced_search_icon_date" id="advanced_search_btn__date" title="sort date"></button>
+			
 			<form action="#" method="post" id = 'search_model'>
 				<input type="text" id="search" name="search" placeholder="car  model ?"  autocomplete="off"/>
 				<input type="submit" id="submit_search" name="submit_search"/>
-			</form>
-			<a href="#" class="advanced_search_icon" id="advanced_search_btn"></a>
+				<button class="advanced_search_icon_clear" id="advanced_search_btn__clear" title="cleaning"></button>
+				</form>
+			<a href="#" class="advanced_search_icon" id="advanced_search_btn" title = 'filter'></a>
 		</div>
 
 		<div class="advanced_search">
@@ -119,7 +123,7 @@
 
 				<li class="about">
 					<p>Choose your favorite super car</p>
-					<ul>
+					<ul id="coment">
 						<li><a href="https://www.facebook.com/Lamborghini" class="facebook" target="_blank"></a></li>
 						<li><a href="https://twitter.com/scuderiaferrari" class="twitter" target="_blank"></a></li>
 						<li><a href="https://www.ferrari.com/en-UA" class="google" target="_blank"></a></li>
@@ -134,7 +138,7 @@
 	<script type="text/javascript" src="./src/index.js"></script>
 	<script type="text/javascript" src="./src/card.js" type="module"></script>	
 	<script type="text/javascript" src="./src/Cars.js"></script>
-	<script type="text/javascript" src="./src/filter.js" type="module"></script>	
+	
 	
 </body>
 </html>
