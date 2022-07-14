@@ -10,6 +10,8 @@ let  carr_array = [];
 
     function loadcars (){
     let out='';
+    let option='';
+    let option_collor ='';
      $.getJSON('cars.json', function(data){
     
         for(let key in data){
@@ -24,8 +26,12 @@ let  carr_array = [];
             out+= '<h2 class = "carprice">'+"$"+data[key].price+'<h2>'
              out+='<p>'+ data[key].year+" /"+data[key].collor+" /"+data[key].run+"km /"+data[key].fuel+" /"+data[key].engine+"sec" + '</p>';
               out+='</li>'
+              option+='<option>'+data[key].producer+'</option>'
+              option_collor+= '<option>'+data[key].collor+'</option>'
         }
         $('#properties_list').html(out);
+        $('#suggestions').html(option);
+        $('#carcollor').html(option_collor);
         $('button.drive').on('click',addToCart);
         $('button.advanced_search_icon_clear').on('click',cleaning);
         $('button.advanced_search_icon_price').on('click', sortPr);
@@ -76,12 +82,13 @@ function checkCart(){
     formSerach.addEventListener('submit', (e) => {
         e.preventDefault();
         const fData = new FormData(search_model);
-        const search_m = fData.get('search').toLocaleUpperCase();
+        const search_m = fData.get('search').toUpperCase();
         for(let cars of carr_array){
-            if(search_m != cars.producer.toLocaleUpperCase()){
-                document.querySelector('.'+cars.art).classList.add("active_prod")   
+            if(search_m != cars.producer.toUpperCase()){
+                document.querySelector('.'+cars.art).classList.add("active_prod") ;
+                 
             }
-            if(search_m == cars.producer.toLocaleUpperCase()){
+            if(search_m == cars.producer.toUpperCase()){
                 document.querySelector('.'+cars.art).classList.remove("active_prod")   
             }
             if(search_m == ''){
@@ -107,6 +114,7 @@ formElement.addEventListener('submit', (e) => {
     else
     if(collor == cars.collor.toLowerCase()){
         document.querySelector('.'+cars.art).classList.remove("active_col")
+        
     }
     if(collor == ''){
         document.querySelector('.'+cars.art).classList.remove("active_col")
@@ -158,7 +166,17 @@ function cleaning (){
         document.querySelector('.'+cars.art).classList.remove("active");
         document.querySelector('.'+cars.art).classList.remove("active_max");
         document.querySelector('.'+cars.art).classList.remove("active_date");
-        document.querySelector('.'+cars.art).classList.remove("active_datel")
+        document.querySelector('.'+cars.art).classList.remove("active_datel");
+        document.querySelector('.'+cars.art).classList.remove("active_prod");
+        document.querySelector('#search').value = '';
+        document.querySelector('#check_in_date').value='';
+        document.querySelector('#check_out_date').value='';
+        document.querySelector('#min_price').value='';
+        document.querySelector('#max_price').value='';
+        document.querySelector('#keywords').value='';
+        
+        
+        
     }
 }
 

@@ -42,11 +42,15 @@
 				<button class="advanced_search_icon_date" id="advanced_search_btn__date" title="sort date"></button>
 			
 			<form action="#" method="post" id = 'search_model'>
-				<input type="text" id="search" name="search" placeholder="car  model ?"  autocomplete="off"/>
+				<input type="text" id="search" name="search" list="suggestions" placeholder="car  model ?"  autocomplete="off"/>
 				<input type="submit" id="submit_search" name="submit_search"/>
 				<button class="advanced_search_icon_clear" id="advanced_search_btn__clear" title="cleaning"></button>
 				</form>
 			<a href="#" class="advanced_search_icon" id="advanced_search_btn" title = 'filter'></a>
+			<datalist id="suggestions">
+					<option></option>
+				</datalist>
+				
 		</div>
 
 		<div class="advanced_search">
@@ -67,8 +71,11 @@
 
 						<input type="text" class="float" id="max_price" name="max_price" placeholder="Max. price"  autocomplete="off">
 					</div>
-					<input type="text" id="keywords" name="collor" placeholder="Collor"  autocomplete="off">
+					<input type="text" id="keywords" name="collor" list="carcollor" placeholder="Collor"  autocomplete="off">
 					<input type="submit" id="submit_search" name="submit_search"/>
+					<datalist id = 'carcollor'>
+						<option></option>
+					</datalist>
 				</form>
 			</div>
 		</div><!--  end advanced search section  -->
