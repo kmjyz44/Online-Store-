@@ -1,3 +1,4 @@
+let variable =1;
 let basket_car = {};
  let carcard = document.querySelector('.car_card');
  
@@ -27,7 +28,8 @@ let  carr_array = [];
         $('#properties_list').html(out);
         $('button.drive').on('click',addToCart);
         $('button.advanced_search_icon_clear').on('click',cleaning);
-        $('button.advanced_search_icon_price').on('click', sortPrice)
+        $('button.advanced_search_icon_price').on('click', sortPr);
+        $('button.advanced_search_icon_date').on('click', sortDate)
     })
     function showCart(){
         checkCart();
@@ -161,21 +163,33 @@ function cleaning (){
 }
 
 //window.onload = function () {
-    function sortPrice (){
+    function sortPrice (a){
 let sortcar = document.querySelector('#properties_list');
+variable++;
+if(variable%2 == 0){
 for(let i = 0; i< sortcar.children.length; i++){
     for(let j = 0; j<sortcar.children.length;j++){
-        if(+sortcar.children[i].getAttribute('data-price')>+sortcar.children[j].getAttribute('data-price')){
+        if(+sortcar.children[i].getAttribute(a)>+sortcar.children[j].getAttribute(a)){
             swapElements(sortcar.children[i],sortcar.children[j])
         }
     }
+}
+}
+else{
+    for(let i = 0; i< sortcar.children.length; i++){
+        for(let j = 0; j<sortcar.children.length;j++){
+            if(+sortcar.children[i].getAttribute(a)<+sortcar.children[j].getAttribute(a)){
+                swapElements(sortcar.children[i],sortcar.children[j])
+            }
+        }
+    }  
 }
 
 }
 
 function swapElements(obj1, obj2) {
     //створити маркерний елемент і вставити його там, де obj1
-    var temp = document.createElement("div");
+    let temp = document.createElement("div");
     obj1.parentNode.insertBefore(temp, obj1);
     // перемістити obj1 праворуч перед obj2
     obj2.parentNode.insertBefore(obj1, obj2);
@@ -184,5 +198,11 @@ function swapElements(obj1, obj2) {
     // видалити тимчасовий вузол маркера
     temp.parentNode.removeChild(temp);
 }
+function sortPr (){
+    sortPrice ('data-price')
+}
 
+function sortDate (){
+    sortPrice ('data-year')
+}
 
