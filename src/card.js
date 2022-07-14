@@ -22,7 +22,7 @@ let  carr_array = [];
             out+='<li class = '+data[key].art+' data-price = '+data[key].price+' data-year = '+ data[key].year+'>';
             out+= '<button href="#" class = "drive" title="Buy" data-art = "'+data[key].art+'">'+"&#128465;"+'</button>';
             out+= '<a href='+data[key].carhref+' class = "link_car"><img src = "'+data[key].immage+'" alt="" class = "img_car"></img></a>';
-            out+= '<div class="name_year">'+'<h1 class = "name">'+data[key].name+ '&nbsp'+'</h1>'+ '<h1>'+ data[key].year+ ' YEAR'+'</h1>'+'</div>';
+            out+= '<div class="name_year">'+'<h2 class = "name">'+data[key].name+ '&nbsp'+'</h2>'+ '<h2>'+ data[key].year+ ' YEAR'+'</h2>'+'</div>';
             out+= '<h2 class = "carprice">'+"$"+data[key].price+'<h2>'
              out+='<p>'+ data[key].year+" /"+data[key].collor+" /"+data[key].run+"km /"+data[key].fuel+" /"+data[key].engine+"sec" + '</p>';
               out+='</li>'

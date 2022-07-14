@@ -55,15 +55,19 @@ body{
     margin: 0 auto;
     position: relative;
 }
-
+.wrapper_car{
+    max-width: 50%;
+    margin: 0 auto;
+    position: relative;
+}
 h1, h2, h3, h4, h5 ,h6{
     color: #626262;
     font-family: "lato-regular", Helvetica, Arial, sans-serif;
     letter-spacing: 1px;
 }
 
-h1              { font-size: 2em; margin: .67em 0 }
-h2              { font-size: 1.2em; margin: .75em 0 }
+h1              { font-size: 1em; margin: .67em 0 }
+h2              { font-size: 0.8em; margin: .75em 0 }
 h3              { font-size: 1.17em; margin: .83em 0 }
 h5              { font-size: .83em; margin: 1.5em 0 }
 h6              { font-size: .75em; margin: 1.67em 0 }
@@ -462,31 +466,47 @@ header nav .login_btn:hover{
 .listings{
     padding: 100px 0;
     background: #eff0f3;
+    box-sizing: border-box;
 }
 
 .listings ul.properties_list{
     list-style: none;
     overflow: hidden;
-    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 40px;
+    grid-row-gap: 1em;
 }
 
 .listings ul.properties_list li{
     display: block;
-    width: 55.90909090909091%;
-    height: auto;
+    max-width: 100%;
+    max-height: 100%;
     position: relative;
     float: left;
-    margin: 0 3.636363636363636% 3.636363636363636% 3;
+    margin: 0;
     padding: 2%; 
     margin-bottom: 5%;
     background: #dcd5d5; 
     border-radius: 5%;
 }
+.listings ul.properties_list li .img_car{
+    display: inline-block;
+    
+    padding: 4px 40px 0px 40px;
+    max-width: 90%;
+    max-height: 60%;
+    position: relative;
+    
+}
+
 
 .listings ul.properties_list li img.property_img{
     width: 100%;
+    height: auto;
     height: auto!important;
     vertical-align: top;
+    
 }
 .listings ul.properties_list li .availability{
     position: absolute;
@@ -511,7 +531,7 @@ header nav .login_btn:hover{
     position: absolute;
     bottom: 0%;
     right: 5%;
-    padding-bottom: 5%;
+    padding-bottom: 1%;
     
 }
 .listings ul.properties_list li .drive{
@@ -523,6 +543,7 @@ header nav .login_btn:hover{
     outline: none; /* Для синий ободки */
     border: 0;
     background: transparent;
+   
 }
 .listings ul.properties_list li .drive:hover{
     font-size: 65px;
@@ -530,13 +551,13 @@ header nav .login_btn:hover{
 }
 .listings ul.properties_list li .carprice{
     position: absolute;
-    bottom: 23%;
+    bottom: 1%;
     left: 10px;
     padding: 5px 10px;
     background: #bfbd86;
     color: #df1a1a;
     font-family: "lato-bold", Helvetica, Arial, sans-serif;
-    font-size: 25px;
+    font-size: 17px;
     font-weight: bold;
     letter-spacing: 3px;
 
@@ -548,7 +569,9 @@ header nav .login_btn:hover{
 .listings ul.properties_list li .blue{
     color: blue;
 }
-
+.listings ul.properties_list li p{
+    font-size: 0.9em
+}
 .listings ul.properties_list li:nth-child(3n+0){
     margin-right: 0;
 }
@@ -578,7 +601,7 @@ header nav .login_btn:hover{
     font-size: 16px!important;
     font-weight: bold;
     margin-bottom: 5px;
-    line-height: 28px;
+    line-height: 16px;
 }
 
 .listings ul li .property_details h1 a{
@@ -589,8 +612,8 @@ header nav .login_btn:hover{
 .listings ul li .property_details h2{
     color: #9d9d9d;
     font-family: "lato-regular", Helvetica, Arial, sans-serif;
-    font-size: 12px;
-    line-height: 26px;
+    font-size: 10px;
+    line-height: 10px;
     font-weight: normal;
 }
 
@@ -602,7 +625,7 @@ header nav .login_btn:hover{
     display: block;
     width: 100%;
     text-align: center;
-    margin: 84px 0 22px 0;
+    margin: 134px 0 22px 0;
 }
 
 .listings .more_listing_btn{
