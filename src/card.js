@@ -26,7 +26,8 @@ let  carr_array = [];
         }
         $('#properties_list').html(out);
         $('button.drive').on('click',addToCart);
-        $('button.advanced_search_icon_clear').on('click',cleaning)
+        $('button.advanced_search_icon_clear').on('click',cleaning);
+        $('button.advanced_search_icon_price').on('click', sortPrice)
     })
     function showCart(){
         checkCart();
@@ -158,13 +159,29 @@ function cleaning (){
         document.querySelector('.'+cars.art).classList.remove("active_datel")
     }
 }
-window.onload = function () {
+
+//window.onload = function () {
+    function sortPrice (){
 let sortcar = document.querySelector('#properties_list');
-//sortcar.forEach(elemen => {console.log(elemen);})
-replaceNode=sortcar.replaceChild(sortcar.children[1], sortcar.children[0]);
-sortcar.appendChild(replaceNode);
+for(let i = 0; i< sortcar.children.length; i++){
+    for(let j = 0; j<sortcar.children.length;j++){
+        if(+sortcar.children[i].getAttribute('data-price')>+sortcar.children[j].getAttribute('data-price')){
+            replaceNode=sortcar.replaceChild(sortcar.children[j], sortcar.children[i]);
+            insertAfter(replaceNode, sortcar.children[i]);
+            //sortcar.appendChild(replaceNode)
+            //console.log(replaceNode)
+           // insertBefore(replaceNode,sortcar.children[i]);
+        }
+    }
 }
 
+//}
+}
+function insertAfter(newNode, existingNode) {
+    window.onload = function () {
+    existingNode.parentNode.insertBefore(newNode, existingNode.nextSibling);
+}
 
+}
 
 
