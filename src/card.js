@@ -166,22 +166,23 @@ let sortcar = document.querySelector('#properties_list');
 for(let i = 0; i< sortcar.children.length; i++){
     for(let j = 0; j<sortcar.children.length;j++){
         if(+sortcar.children[i].getAttribute('data-price')>+sortcar.children[j].getAttribute('data-price')){
-            replaceNode=sortcar.replaceChild(sortcar.children[j], sortcar.children[i]);
-            insertAfter(replaceNode, sortcar.children[i]);
-            //sortcar.appendChild(replaceNode)
-            //console.log(replaceNode)
-           // insertBefore(replaceNode,sortcar.children[i]);
+            swapElements(sortcar.children[i],sortcar.children[j])
         }
     }
 }
 
-//}
-}
-function insertAfter(newNode, existingNode) {
-    window.onload = function () {
-    existingNode.parentNode.insertBefore(newNode, existingNode.nextSibling);
 }
 
+function swapElements(obj1, obj2) {
+    //створити маркерний елемент і вставити його там, де obj1
+    var temp = document.createElement("div");
+    obj1.parentNode.insertBefore(temp, obj1);
+    // перемістити obj1 праворуч перед obj2
+    obj2.parentNode.insertBefore(obj1, obj2);
+    // перемістіть obj2 прямо перед тим місцем, де раніше був obj1
+    temp.parentNode.insertBefore(obj2, temp);
+    // видалити тимчасовий вузол маркера
+    temp.parentNode.removeChild(temp);
 }
 
 
